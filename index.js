@@ -126,7 +126,7 @@ const calculator = {
         this.answer = expression[0];
         console.log(`Result: ${this.expression} = ${this.answer}`);
     },
-    handler(data) {
+    handle(data) {
         if (data.type == 'number' || data.type == 'operation' || data.type == 'comma') {
             this.takeInput(data.text);
         } else {
@@ -243,12 +243,12 @@ const keyboard = {
 
 $(".btn").on("click", (event) => {
     const data = mouse.extractRelevantData(event.target);
-    calculator.handler(data);
+    calculator.handle(data);
 });
 
 $(window).on("keyup", (event) => {
     if (keyboard.acceptableKeys.includes(event.key)) {
         const data = keyboard.extractRelevantData(event.key);
-        calculator.handler(data);
+        calculator.handle(data);
     }
 })
