@@ -128,6 +128,9 @@ const calculator = {
     },
     handle(data) {
         if (data.type == 'number' || data.type == 'operation' || data.type == 'comma') {
+            if (data.type == 'operation' && this.expression.length == 0) {
+                this.expression = "Ans"; 
+            }
             this.takeInput(data.text);
         } else {
             switch (data.id) {
@@ -147,7 +150,7 @@ const calculator = {
                     this.expression += "&";
                     this.calculate();
                     this.showAnswer();
-                    this.expression = 'Ans';
+                    this.expression = "";
                     break;
     
                 default:
