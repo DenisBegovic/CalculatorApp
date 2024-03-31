@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CalculatorApp</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+       <div class="calculator-body">
+            <div class="output-field">
+                <fieldset class="output">
+                    <span class="expression"></span>
+                    <span class="result"></span>
+                </fieldset>
+            </div>
+
+            <div class="input-field">
+                <div class="functions">
+                    <button class="btn function" id="clear-everything">CE</button>
+                    <button class="btn function" id="clear">C</button>
+                    <button class="btn function" id="delete"><=</button>
+                    <button class="btn function" id="equals">=</button>
+                </div>
+
+                <div class="numpad">
+                    <button class="btn number">7</button>
+                    <button class="btn number">8</button>
+                    <button class="btn number">9</button>
+                    <button class="btn number">4</button>
+                    <button class="btn number">5</button>
+                    <button class="btn number">6</button>
+                    <button class="btn number">1</button>
+                    <button class="btn number">2</button>
+                    <button class="btn number">3</button>
+                    <button class="btn answer">Ans</button>
+                    <button class="btn number">0</button>
+                    <button class="btn comma">.</button>
+                </div>
+
+                <div class="operations">
+                    <button class="btn operation" id="divide">÷</button>
+                    <button class="btn operation" id="multiply">x</button>
+                    <button class="btn operation" id="subtract">-</button>
+                    <button class="btn operation" id="add">+</button>
+                </div>
+            </div>
+       </div>
+       
+        <script src="index.js"></script>
+
+    </body>
+
+</html>
