@@ -1,6 +1,6 @@
 :root {
-    --btn-width: 100px;
-    --btn-height: 60px;
+    --btn-width: 55px;
+    --btn-height: 40px;
 }
 
 body {
@@ -12,12 +12,14 @@ body {
 }
 
 .calculator-body {
-    width: 470px;
-    height: 500px;
-    background-color: grey;
+    width: 400px;
+    height: fit-content;
+    background-color: rgb(83, 85, 88);
     border: black 1px solid;
-    box-shadow: inset;
+    box-shadow: 2px 2px 2px 2px rgba(87, 87, 87, 0.329);
     border-radius: 15px;
+    font-family: "Reddit Mono", monospace;
+    font-weight: 700;
 }
 
 .output-field {
@@ -33,7 +35,6 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .expression {
@@ -48,29 +49,58 @@ body {
 }
 
 .input-field {
-    margin-top: 30px;
-    margin: 15px;
-    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 4fr;
+
 }
 
+.first-row {
+    width: 100%;
+}
+
+.second-row {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.btn-small {
+    width: 40px;
+    height: 20px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
 .functions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#equals {
     grid-column-start: 1;
     grid-column-end: 3;
+    width: auto;
 }
 
 .btn {
+    background-color: aliceblue;
     width: var(--btn-width);
     height: var(--btn-height);
-    border-radius: 5px;
-    border-width: 2px;
-    box-shadow: inset;
-    margin: 3px;
-    font-size: 1.7rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
 }
+
 .btn:hover {
+    background-color: blanchedalmond;
+}
+
+.btn-small:hover {
     background-color: blanchedalmond;
 }
