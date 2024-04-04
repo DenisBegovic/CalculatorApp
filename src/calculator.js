@@ -1,6 +1,6 @@
 class Calculator {
     constructor() {
-        this.expression = "36÷3+(2x2+(16x0.25))";
+        this.expression = "";
         this.output = 0;
         // Changing operator sign or adding new operations go through here (this.operator)
         this.operator = {
@@ -15,7 +15,7 @@ class Calculator {
     }
 
 
-                                                                                                    //         MAIN PART OF THE PROGRAM           //
+       //         MAIN PART OF THE PROGRAM           //
 
 
     // All primitive functions (can be added on in the future) 
@@ -154,8 +154,20 @@ class Calculator {
     }
 
                                                                                                          //         HELPER FUNCTIONS         //
+    clear() {
+        this.output = 0;
+        this.expression = '';
+    } 
+    clearExpression() {
+        this.expression = '';
+    }
+    delete() {
+        let expression = this.expression.split('');
+        expression.pop();
+        this.expression = expression.join('');
+    }
 
-}
+}   
 
-const calc = new Calculator();
-calc.getResult();
+
+export default Calculator;
