@@ -32,35 +32,37 @@ const buttonPressHandler = key => {   // Return a object holding properties of t
             },
         }
     }
+
+
     let text, type, id;
-    if (validInputs.number.includes(key)) {
+    if (validInputs.number.includes(key)) { // Check if the input is a number 
         text = key;
         type = 'number';
         id = '';
-    } else if (Object.values(validInputs.operator).includes(key)) {
+    } else if (Object.values(validInputs.operator).includes(key)) {  // Check if the input is an operator
         type = "operator";
         switch (key) {
             case validInputs.operator.multiply:
-                text = calculator.operator.multiply;
+                text = 'x';
                 id = 'multiply';
                 break;
             case validInputs.operator.divide:
-                text = calculator.operator.divide;
+                text = '÷';
                 id = 'divide';
                 break;
             case validInputs.operator.add:
-                text = calculator.operator.plus;
+                text = '+';
                 id = 'add';
                 break;
             case validInputs.operator.subtract:
-                text = calculator.operator.minus;
+                text = '-';
                 id = 'subract';
                 break;
             case validInputs.operator.openParenthasis:
-                text = calculator.operator.openParenthasis;
+                text = '(';
                 break;
             case validInputs.operator.closeParenthasis:
-                text = calculator.operator.closeParenthasis;
+                text = ')';
                 break;
             default:
                 break;
