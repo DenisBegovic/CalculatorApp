@@ -33,13 +33,10 @@ function handleEvent(button) {
 
 $(".btn").on("click", (event) => {   
     const button = clickHandler(event.target);
-    console.log(button);
     handleEvent(button);
 });
 
 $(window).on("keyup", (event) => {
-    console.log(event.key);
     const button = buttonPressHandler(event.key);
-    console.log(button);
     handleEvent(button);
 });
