@@ -1,6 +1,6 @@
 class Calculator {
     constructor() {
-        this.expression = "";
+        this.expression = '';
         this.output = 0;
         // Changing operator sign or adding new operations go through here (this.operator)
         this.operator = {
@@ -8,8 +8,8 @@ class Calculator {
             minus: '-',
             divide: '÷',
             multiply: 'x',
-            openParenthasis: '(',
-            closeParenthasis: ')'
+            openBracket: '(',
+            closedBracket: ')'
         }
         this.operationPriority = [[this.operator.multiply, this.operator.divide], [this.operator.plus, this.operator.minus]];
     }
@@ -80,7 +80,7 @@ class Calculator {
         }
         parsedExpression.pop() // Removes the end symbol //
         
-        console.log(`Pretty expression is: || ${parsedExpression.join('')} ||`);
+        console.log(`\n\nPretty expression is: || ${parsedExpression.join('')} ||`);
         return parsedExpression;
     }
 
@@ -150,17 +150,21 @@ class Calculator {
     getResult() {
         let expression = this.parseExpression();
         this.output = this.calculate(expression);
-        console.log(this.output);
+        return this.output;
     }
+
+    // Adding brackets logic to expression
 
                                                                                                          //         HELPER FUNCTIONS         //
     clear() {
         this.output = 0;
         this.expression = '';
     } 
+
     clearExpression() {
         this.expression = '';
     }
+
     delete() {
         let expression = this.expression.split('');
         expression.pop();
