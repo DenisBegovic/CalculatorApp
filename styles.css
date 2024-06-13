@@ -3,6 +3,14 @@
     --btn-height: 60px;
 }
 
+img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 500px;
+    
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -115,6 +123,7 @@ body {
 
 .btn:hover {
     background-color: blanchedalmond;
+    cursor: pointer;
 }
 
 .btn-small:hover {
